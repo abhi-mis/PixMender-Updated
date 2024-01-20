@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Adamas</title>
+  <link rel="stylesheet" type="text/css" href="src/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="src/ADAMAS_logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="src/ADAMAS_logo.png" alt="Adamas logo" class="logo" />
+    </div>
+    <div class="top-buttons">
+      <button class="button-circle">
+        <i class="fas fa-info-circle"></i>
+        <span class="official-font"><b>General Information</b></span>
+      </button>
+      <button class="button-circle">
+        <i class="fas fa-graduation-cap"></i>
+        <span class="official-font"><b>Academic Qualification</b></span>
+      </button>
+      <button style="background-color: aqua;" class="button-circle">
+        <i class="fas fa-upload"></i>
+        <span class="official-font"><b>Upload Documents</b></span>
+      </button>
+      <button class="button-circle">
+        <i class="fas fa-file-signature"></i>
+        <span class="official-font"><b>Declaration</b></span>
+      </button>
+    </div>
+    <style>
+      #imagePreviewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#imagePreviewContainer img {
+  max-width: 150px; /* Set the maximum width for the image preview */
+  max-height: 150px; /* Set the maximum height for the image preview */
+  border: 1px solid #ddd; /* Add a border for better visibility */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+}
+    </style>
+
+    <p style="margin-top: 60px; color: red; font-weight: bold; font-size: 1.2em;">Upload Documents*</p>
+
+    <div class="upload-documents">
+      <div class="photo-upload">
+        <p><b>Upload Your Recent Passport Size Photograph and Signature *</b></p>
+    
+        <label for="photo-input">
+          <input style="margin: 20px; transform: scale(1.4);" type="file" id="imageInput" accept="image/*" multiple>
+          <button onclick="uploadImage()" style="margin: 20px; transform: scale(1.4);">Upload</button>
+
+        </label>
+        <p class="allowed-format"><i>Allowed Format: Jpg, Png, Jpeg.</i></p>
+    
+        <!-- Add a container for image previews and captions -->
+        <div id="imagePreviewContainer"></div>
+      </div>
+    </div>
+  </div>
+  <a href="pr/photo.html" target="_blank">
+    <button style="font-style: normal; background-color: rgb(203, 153, 153);" class="button-circle"><b>Photo Generator</b>
+    </button>
+  </a>
+  <a href="pr/sign.html" target="_blank">
+    <button style="font-style: normal; background-color: rgb(149, 149, 255);" class="button-circle"><b>Digital Signature</b>
+    </button>
+  </a>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+  <script src="src/main.js"></script>
+  <script src="server/index.js"></script>
+  <div class="tr">
+    <h6></h6>
+
+    <div style="border-radius:5px;" id="google_translate_element" class="xyz"></div>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+			  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+			}
+			</script>
+</body>
+</html>
